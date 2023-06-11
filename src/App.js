@@ -6,7 +6,7 @@ function App() {
   console.log("hi");
   return (
     <>
-      <div>
+      <div className="app">
         <header>
           <title>FilmVerse</title>
         </header>
