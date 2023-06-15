@@ -5,8 +5,9 @@ import { Routes, Route } from "react-router-dom";
 import LoginPage from "./components/Login/LoginPage";
 import { app } from "../../firebase";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
-import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { login, logout, selectUser } from "./features/userSlice";
+import ProfilePage from "./components/Profile/ProfilePage";
 function App() {
   console.log("hi");
   const user = useSelector(selectUser);
