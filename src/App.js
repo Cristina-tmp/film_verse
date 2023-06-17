@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import "./App.css";
-import HomeScreen from "./components/Home/HomeScreen";
 import { Routes, Route } from "react-router-dom";
 import LoginPage from "./components/Login/LoginPage";
 import { app } from "./firebase";
@@ -8,6 +7,7 @@ import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { useDispatch, useSelector } from "react-redux";
 import { login, logout, selectUser } from "./features/userSlice/userSlice";
 import ProfilePage from "./components/ProfilePage/ProfilePage";
+import HomeScreen from "./components/Home/Home";
 function App() {
   console.log("hi");
   const user = useSelector(selectUser);
