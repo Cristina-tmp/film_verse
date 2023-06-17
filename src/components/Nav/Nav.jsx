@@ -3,9 +3,11 @@ import "./Nav.css";
 import filmLogo from "../../assets/filmLogo.png";
 import Avatar from "react-avatar";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Nav = () => {
   const [show, handleShow] = useState(false);
+  const navigate = useNavigate();
 
   const transitionNavBar = () => {
     if (window.scrollY > 100) {
@@ -24,9 +26,19 @@ const Nav = () => {
   return (
     <div className={`nav ${show && "nav__black"} `}>
       <div className="nav__contents">
-        <img src={filmLogo} alt="" className="nav__logo" />
+        <img
+          src={filmLogo}
+          alt=""
+          className="nav__logo"
+          onClick={() => navigate("/")}
+        />
 
-        <Avatar name="Cristina Z" size="80" className="nav__avatar" />
+        <Avatar
+          name=": D"
+          size="60"
+          className="nav__avatar"
+          onClick={() => navigate("/profile")}
+        />
       </div>
     </div>
   );

@@ -3,11 +3,11 @@ import "./App.css";
 import HomeScreen from "./components/Home/HomeScreen";
 import { Routes, Route } from "react-router-dom";
 import LoginPage from "./components/Login/LoginPage";
-import { app } from "../../firebase";
+import { app } from "./firebase";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { useDispatch, useSelector } from "react-redux";
-import { login, logout, selectUser } from "./features/userSlice";
-import ProfilePage from "./components/Profile/ProfilePage";
+import { login, logout, selectUser } from "./features/userSlice/userSlice";
+import ProfilePage from "./components/ProfilePage/ProfilePage";
 function App() {
   console.log("hi");
   const user = useSelector(selectUser);
@@ -24,12 +24,12 @@ function App() {
           })
         );
       } else {
-        dispatch(logout);
+        dispatch(logout());
       }
     });
     // cleanup
     return unsubscribe;
-  }, []);
+  }, [dispatch, auth]);
   return (
     <>
       <div className="app">

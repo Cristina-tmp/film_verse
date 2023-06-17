@@ -1,0 +1,40 @@
+.planPage__plan {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.25rem;
+  padding-left: 0;
+  opacity: 0.8;
+  z-index: -10;
+}
+
+.planPage__plan:hover {
+  opacity: 1;
+}
+
+.planPage__button {
+  font-size: 1rem;
+  background-color: #e50914;
+  color: white;
+  padding: 0.625rem 1.25rem;
+  border: none;
+  font-weight: 600;
+  z-index: 150;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.planPage__button:hover {
+  cursor: pointer;
+}
+
+.planPage__button--disabled {
+  background-color: grey !important;
+}
+
+.planPage__info > h5 {
+  padding-top: 5px;
+}
+
+.planPage__info > h6 {
+  padding-top: 5px;
+}
