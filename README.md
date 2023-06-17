@@ -1,4 +1,4 @@
-FilmVerse - a full stack movie database app powered by React, Stripe and TMDB.
+FilmVerse - a full stack movie database app powered by React, Stripe, and TMDB.
 
 ## View Demo [Here](https://film-verse.vercel.app/)
 
